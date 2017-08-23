@@ -1,0 +1,21 @@
+Package: freepst
+Type: Package
+Title: Read OST/PST Files
+Version: 0.1.0
+Date: 2017-08-23
+Author: Bob Rudis (bob@rud.is)
+Maintainer: Bob Rudis <bob@rud.is>
+Description: An 'rJava' wrapper around 'java-libpst' <https://github.com/rjohnsondev/java-libpst>.
+URL: https://github.com/hrbrmstr/freepst
+BugReports: https://github.com/hrbrmstr/freepst/issues
+License: AGPL
+SystemRequirements: Java
+Suggests:
+    testthat,
+    covr
+Depends:
+    R (>= 3.2.0),
+    rJava
+RoxygenNote: 6.0.1
+Imports:
+    dplyr

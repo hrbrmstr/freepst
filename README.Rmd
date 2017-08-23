@@ -1,0 +1,46 @@
+---
+output: rmarkdown::github_document
+---
+
+`freepst` : Read OST/PST Files
+
+An 'rJava' wrapper around 'java-libpst' <https://github.com/rjohnsondev/java-libpst>.
+
+The following functions are implemented:
+
+- `read_pst`:	Get all messages in an OST/PST
+
+### Installation
+
+```{r eval=FALSE}
+devtools::install_github("hrbrmstr/freepst")
+```
+
+```{r message=FALSE, warning=FALSE, error=FALSE, include=FALSE}
+options(width=120)
+```
+
+### Usage
+
+```{r message=FALSE, warning=FALSE, error=FALSE}
+library(freepst)
+
+# current verison
+packageVersion("freepst")
+
+dplyr::glimpse(read_pst(system.file("extdata/example-2013.ost", package="freepst")))
+
+dplyr::glimpse(read_pst(system.file("extdata/dist-list.pst", package="freepst")))
+```
+
+### Test Results
+
+```{r message=FALSE, warning=FALSE, error=FALSE}
+library(freepst)
+library(testthat)
+
+date()
+
+test_dir("tests/")
+```
+
