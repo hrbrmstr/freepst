@@ -1,4 +1,8 @@
 
+![](imgs/free.jpg)
+
+Get out of PST Jail Free!
+
 `freepst` : Read OST/PST Files
 
 An 'rJava' wrapper around 'java-libpst' <https://github.com/rjohnsondev/java-libpst>.
@@ -75,7 +79,7 @@ library(testthat)
 date()
 ```
 
-    ## [1] "Wed Aug 23 10:34:09 2017"
+    ## [1] "Thu Aug 24 09:02:17 2017"
 
 ``` r
 test_dir("tests/")
