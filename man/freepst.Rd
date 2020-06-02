@@ -3,7 +3,6 @@
 \docType{package}
 \name{freepst}
 \alias{freepst}
-\alias{freepst-package}
 \title{Read OST/PST Files}
 \description{
 An 'rJava' wrapper around 'java-libpst' \url{https://github.com/rjohnsondev/java-libpst}.

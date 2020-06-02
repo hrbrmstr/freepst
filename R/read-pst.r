@@ -32,6 +32,7 @@ read_pst <- function(path) {
         if (is.jnull(email)) break
         if (email$getMessageClass() == "IPM.Microsoft.ScheduleData.FreeBusy") next
         tmp <- list(
+          folder = folder$getDisplayName(),
           sent_by = email$getSenderName(),
           sent_by_addr = email$getSenderEmailAddress(),
           received_by = email$getReceivedByName(),
