@@ -1,50 +1,62 @@
 ---
 output: rmarkdown::github_document
+editor_options: 
+  chunk_output_type: console
 ---
+```{r pkg-knitr-opts, include=FALSE}
+hrbrpkghelpr::global_opts()
+```
+
+```{r badges, results='asis', echo=FALSE, cache=FALSE}
+hrbrpkghelpr::stinking_badges()
+```
 
 ![](imgs/free.jpg)
 
+```{r description, results='asis', echo=FALSE, cache=FALSE}
+hrbrpkghelpr::yank_title_and_description()
+```
+
 Get out of PST Jail Free!
 
-`freepst` : Read OST/PST Files
-
-An 'rJava' wrapper around 'java-libpst' <https://github.com/rjohnsondev/java-libpst>.
+## What's Inside The Tin
 
 The following functions are implemented:
 
-- `read_pst`:	Get all messages in an OST/PST
-
-### Installation
-
-```{r eval=FALSE}
-devtools::install_github("hrbrmstr/freepst")
+```{r ingredients, results='asis', echo=FALSE, cache=FALSE}
+hrbrpkghelpr::describe_ingredients()
 ```
 
-```{r message=FALSE, warning=FALSE, error=FALSE, include=FALSE}
-options(width=120)
+## Installation
+
+```{r install-ex, results='asis', echo=FALSE, cache=FALSE}
+hrbrpkghelpr::install_block()
 ```
 
-### Usage
+## Usage
 
-```{r message=FALSE, warning=FALSE, error=FALSE}
+```{r lib-ex}
 library(freepst)
 
-# current verison
+# current version
 packageVersion("freepst")
 
+```
+
+```{r ex-01}
 dplyr::glimpse(read_pst(system.file("extdata/example-2013.ost", package="freepst")))
 
 dplyr::glimpse(read_pst(system.file("extdata/dist-list.pst", package="freepst")))
 ```
 
-### Test Results
+## freepst Metrics
 
-```{r message=FALSE, warning=FALSE, error=FALSE}
-library(freepst)
-library(testthat)
-
-date()
-
-test_dir("tests/")
+```{r cloc, echo=FALSE}
+cloc::cloc_pkg_md()
 ```
+
+## Code of Conduct
+
+Please note that this project is released with a Contributor Code of Conduct. 
+By participating in this project you agree to abide by its terms.
 
